@@ -1,0 +1,12 @@
+{
+  "name": "My Portfolio Website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["Web Development", "Portfolio", "HTML", "CSS", "JavaScript", "Responsive Design", "Frontend", "Backend", "Full Stack", "Projects", "Skills", "Experience", "Contact"],
+  "author": "Oluwashola Busari",
+  "license": "ISC"
+}
