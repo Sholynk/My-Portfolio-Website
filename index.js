@@ -53,7 +53,7 @@ window.onscroll = () => {
     scrollUpBtn.classList.toggle('show', window.scrollY > 500);
     // Remove smooth scroll on scroll up button click
     // scrollUpBtn.addEventListener('click', () => {
-    // document.documentElement.style.scrollBehavior = 'auto';
+    //     document.documentElement.style.scrollBehavior = 'auto';
     // });
     // // Smooth scroll on menu items click
     navLinks.forEach(link => {
@@ -149,5 +149,5 @@ ScrollReveal({
 });
 ScrollReveal().reveal('.header-text, .heading', { origin: 'top' });
 ScrollReveal().reveal('.header-image, .projects-container, .services-content', { origin: 'bottom' });
-ScrollReveal().reveal('.header-content h1, .profile-photo, .skills-content, .contact form', { origin: 'left' });
+ScrollReveal().reveal('.header-content h1, .profile-photo, .skills-content', { origin: 'left' });
 ScrollReveal().reveal('.header-content p, .about-image, .skills-content:nth-child(2), .contact-image', { origin: 'right' });
