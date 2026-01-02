@@ -581,11 +581,9 @@ nav .nav-links li .active {
 
 .form-container {
   display: grid;
-  align-items: center;
-  justify-content: center;
   width: 70%;
   height: fit-content;
-  /* border: 2px solid firebrick; */
+  border: 2px solid firebrick;
   padding: 10rem 3rem 5rem 3rem;
 }
 
