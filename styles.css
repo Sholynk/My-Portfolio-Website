@@ -432,6 +432,33 @@ nav .nav-links li .active {
   outline: 2px solid var(--main-color);
 }
 
+.service-detail {
+  max-width: 900px;
+  margin: 5rem auto;
+  padding: 3rem;
+  background: var(--second-bg-color);
+  border-radius: 1.5rem;
+}
+
+.service-detail h2 {
+  color: var(--main-color);
+  margin-bottom: 1rem;
+}
+
+.service-detail p {
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.service-detail ul {
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+}
+
+.service-detail ul li {
+  margin-bottom: 0.8rem;
+}
+
 .projects {
   width: 100%;
   min-height: 100vh;
