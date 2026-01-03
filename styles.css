@@ -576,7 +576,7 @@ nav .nav-links li .active {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid #fff;
+  /* border: 2px solid #fff; */
   background-color: var(--second-bg-color);
 }
 
