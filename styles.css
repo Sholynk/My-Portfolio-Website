@@ -12,10 +12,24 @@
 
 /* utilities */
 :root {
-  --bg-color: #1f242d;
+  /* --bg-color: #1f242d;
   --second-bg-color: #323946;
   --text-color: #fff;
   --main-color: #0ef;
+  --max-width: 1200px; */
+
+  /* The deep navy from your logo/backgrounds */
+  --bg-color: #0a111f;
+
+  /* A slightly lighter blue-gray for cards/sections, matching your brand depth */
+  --second-bg-color: #162033;
+
+  /* Clean white for high contrast on dark backgrounds */
+  --text-color: #ffffff;
+
+  /* The "Main" brand color - replacing the neon with your professional teal/blue accent */
+  --main-color: #008081;
+
   --max-width: 1200px;
 }
 
@@ -169,7 +183,7 @@ nav .nav-links li .active {
 }
 
 .header .header-content .header-text p {
-  font-size: 3rem;
+  font-size: 1.5rem;
   line-height: 1.5;
   margin-bottom: 1rem;
 }
@@ -581,7 +595,7 @@ nav .nav-links li .active {
 
 .form-container {
   display: grid;
-  width: 100%;
+  width: 70%;
   height: fit-content;
   /* border: 2px solid firebrick; */
   padding: 10rem 3rem 5rem 3rem;
@@ -733,7 +747,7 @@ footer div a:hover {
 
 @media (max-width: 1200px) {
   html {
-    font-size: 60%;
+    font-size: 55%;
   }
 
   .header .header-content .header-text .name {
