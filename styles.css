@@ -585,7 +585,7 @@ nav .nav-links li .active {
   width: 70%;
    margin: 0 auto;
   height: fit-content;
-  border: 2px solid firebrick;
+  /* border: 2px solid firebrick; */
   padding: 10rem 3rem 5rem 3rem;
 }
 
