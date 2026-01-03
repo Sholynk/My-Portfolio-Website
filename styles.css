@@ -573,9 +573,9 @@ nav .nav-links li .active {
 .contact-form {
   width: 100vw;
   min-height: 100vh;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 2px solid #fff;
   background-color: var(--second-bg-color);
 }
