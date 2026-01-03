@@ -18,18 +18,12 @@
   --main-color: #0ef;
   --max-width: 1200px; */
 
-  /* The deep navy from your logo/backgrounds */
-  --bg-color: #0a111f;
-
-  /* A slightly lighter blue-gray for cards/sections, matching your brand depth */
-  --second-bg-color: #162033;
-
-  /* Clean white for high contrast on dark backgrounds */
-  --text-color: #ffffff;
-
-  /* The "Main" brand color - replacing the neon with your professional teal/blue accent */
-  --main-color: #008081;
-
+  --bg-color: #1e232b; /* Main dark background */
+  --second-bg-color: #2a303b; /* Cards / sections */
+  --text-color: #e6eaf0; /* Primary text */
+  --main-color: #00c6cf; /* Brand accent (buttons, links, highlights) */
+  --hover-color: #00b0b8; /* Hover / emphasis */
+  --muted-text-color: #a0a8b3; /* Secondary text */
   --max-width: 1200px;
 }
 
