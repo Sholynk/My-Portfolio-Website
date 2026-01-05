@@ -548,37 +548,23 @@ nav .nav-links li .active {
 }
 
 .contact-info-content h2 {
-  position: absolute;
-  top: 1%;
-  font-size: 2.5rem;
-  font-weight: 900;
+  
 }
 
 .contact-info-item {
-  width: 25%;
-  background-color: var(--main-color);
-  color: var(--bg-color);
-  padding: 2rem 3rem;
-  border-radius: 50%;
-  box-shadow: 0 2px 5px var(--main-color);
-  text-align: center;
-  transition: all 0.3s ease;
+  
 }
 
 .contact-info-item h3 {
-  font-weight: 900;
-  font-size: large;
+  
 }
 
 .contact-info-item p {
-  font-size: 1.5rem;
-  word-wrap: break-word;
+  
 }
 
 .contact-info-item:hover {
-  background-color: transparent;
-  outline: 2px solid var(--main-color);
-  color: var(--text-color);
+  
 }
 
 /* Contact Form Styling */
