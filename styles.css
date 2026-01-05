@@ -530,7 +530,7 @@ nav .nav-links li .active {
 .contact-info-content {
   width: 100%;
   display: grid;
-  justify-content: center;
+  align-items: center;
   place-items: center;
   padding: 10rem 0 0 0;
   position: relative;
