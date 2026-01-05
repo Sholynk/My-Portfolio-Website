@@ -530,9 +530,6 @@ nav .nav-links li .active {
 .contact-info-content {
   width: 100%;
   display: grid;
-  /* flex-direction: column;
-  justify-content: center;
-  align-items: center; */
   padding: 10rem 0 0 0;
   position: relative;
   border: 2px solid firebrick;
@@ -541,7 +538,6 @@ nav .nav-links li .active {
 .contact-info-wrapper {
   width: 100%;
   display: grid;
-  place-items: center;
   gap: 1.5rem;
   grid-template-columns: repeat(2,1fr);
   border: 2px solid var(--main-color);
