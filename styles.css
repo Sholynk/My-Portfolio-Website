@@ -535,12 +535,12 @@ nav .nav-links li .active {
   align-items: center; */
   padding: 10rem 0 0 0;
   position: relative;
+  border: 2px solid firebrick;
 }
 
 .contact-info-wrapper {
   width: 100%;
   display: grid;
-  border: 2px solid firebrick;
   place-items: center;
   gap: 1.5rem;
   grid-template-columns: repeat(2,1fr);
