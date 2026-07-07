@@ -691,6 +691,7 @@ footer p a:hover {
   right: 3rem
   height: 3rem;
   width: 3rem;
+  aspect-ratio: 1/1;
   background-color: var(--main-color);
   font-size: 2rem;
   text-align: center;
