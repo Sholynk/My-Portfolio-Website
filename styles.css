@@ -687,8 +687,8 @@ footer p a:hover {
 
 .scroll-up-btn {
   position: fixed;
-  bottom: 20px;
-  right: 30px;
+  bottom: 2rem;
+  right: 3rem
   height: 3rem;
   width: 3rem;
   background-color: var(--main-color);
