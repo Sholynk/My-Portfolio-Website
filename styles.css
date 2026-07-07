@@ -76,7 +76,9 @@ img {
   box-shadow: 0 2px 5px var(--main-color);
   padding: 1rem;
   margin: 2rem 0 0 0;
-  transition: color, background 0.5s ease;
+  transition:
+    color,
+    background 0.5s ease;
 }
 .icon-link:hover {
   outline: 2px solid var(--main-color);
@@ -232,7 +234,8 @@ nav .nav-links li .active {
   align-items: center;
   border-radius: 50%;
   overflow: hidden;
-  box-shadow: 2px 2px 35px -5px var(--main-color) inset,
+  box-shadow:
+    2px 2px 35px -5px var(--main-color) inset,
     -2px -2px 35px -5px var(--main-color) inset;
   animation: float 3s ease-in-out infinite;
 }
@@ -300,7 +303,8 @@ nav .nav-links li .active {
   flex: 1 0 35%;
   display: flex;
   align-items: center;
-  box-shadow: 2px 2px 35px var(--main-color) inset,
+  box-shadow:
+    2px 2px 35px var(--main-color) inset,
     -2px -2px 35px var(--main-color) inset;
   animation: float 3s ease-in-out infinite;
 }
@@ -395,7 +399,9 @@ nav .nav-links li .active {
   background-color: var(--second-bg-color);
   padding: 2rem;
   border-radius: 10px;
-  transition: all 0.3s ease, color 0.3s ease;
+  transition:
+    all 0.3s ease,
+    color 0.3s ease;
 }
 
 .services .services-content > *:hover {
@@ -545,7 +551,7 @@ nav .nav-links li .active {
   height: 100%;
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   border: 2px solid var(--main-color);
 }
 
@@ -555,19 +561,15 @@ nav .nav-links li .active {
 }
 
 .contact-info-item {
-  
 }
 
 .contact-info-item h3 {
-  
 }
 
 .contact-info-item p {
-  
 }
 
 .contact-info-item:hover {
-  
 }
 
 /* Contact Form Styling */
