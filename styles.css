@@ -562,6 +562,13 @@ nav .nav-links li .active {
   max-width: 62rem;
 }
 
+.contact-info-intro h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
 .contact-info-intro p {
   font-size: 1.5rem;
   line-height: 1.7;
