@@ -1,0 +1,25 @@
+# Busari Oluwashola Portfolio
+
+> Busari Oluwashola is a software developer based in Ogun State, Nigeria. He builds responsive websites, web applications, digital experiences, and data-informed solutions.
+
+## Services
+
+- Web development: responsive websites and web applications, frontend development, backend integration, and performance tuning.
+- Graphics design: brand identity, social media visuals, marketing materials, and design systems.
+- Digital marketing: content strategy, audience research, campaign reporting, and conversion analysis.
+
+## Selected work
+
+- Responsive Portfolio Website — a personal portfolio designed for clear navigation, responsive presentation, and accessible contact paths.
+- E-commerce Web App — product discovery, cart flows, and checkout UX.
+- Task Management System — prioritisation, progress tracking, and daily-work planning.
+- Business Landing Page — conversion-focused content hierarchy and calls to action.
+- Data Visualization Dashboard — clear analytics, trends, and decision-support views.
+- Blog Content Platform — content creation, publishing workflow, and readable articles.
+
+## Contact
+
+- Website: https://sholynk.tech/
+- Email: sholabusari66@gmail.com
+- Phone: +234 902 700 4273
+- Location: Ogun State, Nigeria
