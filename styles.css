@@ -656,6 +656,15 @@ nav .nav-links li .active {
   background-color: var(--second-bg-color);
 }
 
+.contact-form .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem 1.5rem;
+}
+
 .form-container {
   display: grid;
   width: 90%;
