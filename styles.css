@@ -117,8 +117,47 @@ nav .nav-content {
 }
 
 nav .logo {
-  font-size: 1.5rem;
-  font-weight: 900;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--text-color);
+  line-height: 1;
+}
+
+nav .logo img {
+  width: 4.2rem;
+  height: 4.2rem;
+  filter: drop-shadow(0 0 0.8rem rgba(56, 189, 248, 0.3));
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+nav .logo:hover img {
+  transform: translateY(-2px) rotate(-4deg);
+  filter: drop-shadow(0 0 1.1rem rgba(56, 189, 248, 0.55));
+}
+
+nav .logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  color: var(--text-color);
+}
+
+nav .logo-text strong {
+  color: var(--text-color);
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+nav .logo-text small {
+  color: var(--accent-color);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
 nav .nav-links {
@@ -619,7 +658,7 @@ nav .nav-links li .active {
 
 .form-container {
   display: grid;
-  width: 100%;
+  width: 90%;
   height: fit-content;
   padding: 4rem 3rem 4rem 3rem;
   border-radius: 3rem;
