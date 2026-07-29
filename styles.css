@@ -306,7 +306,7 @@ nav .nav-links li .active::after {
 }
 
 .header .header-content .profile-photo {
-  width: 60%;
+  width: 70%;
   aspect-ratio: 1/1;
   display: flex;
   align-items: center;
@@ -705,6 +705,7 @@ body.modal-open {
   place-items: center;
   width: 4.2rem;
   height: 4.2rem;
+  aspect-ratio: 1/1;
   padding: 0;
   color: #0b1730;
   background: #f8fafc;
@@ -744,6 +745,66 @@ body.modal-open {
   transform: scale(1.1);
 }
 
+/* Keep the project overlay stable while its action is hovered or focused. */
+.project-card {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: var(--bg-color);
+}
+
+.project-card > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  opacity: 1;
+  transition: transform 0.35s ease;
+}
+
+.project-card-intro {
+  position: absolute;
+  inset: 0;
+  min-height: 0;
+  padding: 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(1.5rem);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.project-card:hover .project-card-intro,
+.project-card:focus-within .project-card-intro {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.project-card:hover > img,
+.project-card:focus-within > img {
+  transform: scale(1.05);
+}
+
+@media (hover: none) {
+  .project-card {
+    aspect-ratio: auto;
+  }
+
+  .project-card > img {
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .project-card-intro {
+    position: static;
+    min-height: 0;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+  }
+}
+
 .project-trigger {
   cursor: pointer;
 }
@@ -757,7 +818,9 @@ body.modal-open {
   padding: 2rem;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.25s ease, visibility 0.25s ease;
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease;
 }
 
 .project-modal.is-open {
@@ -884,7 +947,9 @@ body.modal-open {
   color: var(--text-color);
   background: rgba(5, 8, 22, 0.82);
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .project-modal__close:hover {

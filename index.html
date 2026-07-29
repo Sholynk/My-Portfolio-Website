@@ -136,7 +136,11 @@
                 grow. From simple landing pages to full web systems, every
                 project is built with purpose and clarity in mind.
               </p>
-              <button class="btn service-trigger" type="button" data-service="web">
+              <button
+                class="btn service-trigger"
+                type="button"
+                data-service="web"
+              >
                 Explore service
               </button>
             </div>
@@ -151,7 +155,11 @@
                 should guide attention, not distract from it and that principle
                 shapes every design choice I make.
               </p>
-              <button class="btn service-trigger" type="button" data-service="design">
+              <button
+                class="btn service-trigger"
+                type="button"
+                data-service="design"
+              >
                 Explore service
               </button>
             </div>
@@ -166,7 +174,11 @@
                 growth. The aim is simple: better visibility, clearer messaging,
                 and results you can actually measure.
               </p>
-              <button class="btn service-trigger" type="button" data-service="marketing">
+              <button
+                class="btn service-trigger"
+                type="button"
+                data-service="marketing"
+              >
                 Explore service
               </button>
             </div>
@@ -183,14 +195,21 @@
         aria-modal="true"
         aria-labelledby="service-modal-title"
       >
-        <button class="service-modal__close" type="button" aria-label="Close service details" data-modal-close>
+        <button
+          class="service-modal__close"
+          type="button"
+          aria-label="Close service details"
+          data-modal-close
+        >
           <i class="fa-solid fa-xmark" aria-hidden="true"></i>
         </button>
         <div class="service-modal__image-wrap">
           <img class="service-modal__image" src="" alt="" />
         </div>
         <div class="service-modal__content">
-          <div class="service-modal__eyebrow"><i aria-hidden="true"></i><span>Service details</span></div>
+          <div class="service-modal__eyebrow">
+            <i aria-hidden="true"></i><span>Service details</span>
+          </div>
           <h2 id="service-modal-title"></h2>
           <p class="service-modal__description"></p>
           <h3>What I can help with</h3>
@@ -216,9 +235,14 @@
                   CSS, and JavaScript to showcase skills, services, and
                   projects.
                 </p>
-                <button class="icon-link project-trigger" type="button" data-project="portfolio" aria-label="Open Responsive Portfolio Website case study"
-                  ><i class="fa fa-external-link" aria-hidden="true"></i
-                ></button>
+                <button
+                  class="icon-link project-trigger"
+                  type="button"
+                  data-project="portfolio"
+                  aria-label="Open Responsive Portfolio Website case study"
+                >
+                  <i class="fa fa-external-link" aria-hidden="true"></i>
+                </button>
               </div>
             </div>
 
@@ -230,9 +254,14 @@
                   An online store platform featuring product listings, shopping
                   cart functionality, and secure checkout integration.
                 </p>
-                <button class="icon-link project-trigger" type="button" data-project="ecommerce" aria-label="Open E-commerce Web App case study"
-                  ><i class="fa fa-external-link" aria-hidden="true"></i
-                ></button>
+                <button
+                  class="icon-link project-trigger"
+                  type="button"
+                  data-project="ecommerce"
+                  aria-label="Open E-commerce Web App case study"
+                >
+                  <i class="fa fa-external-link" aria-hidden="true"></i>
+                </button>
               </div>
             </div>
 
@@ -244,9 +273,14 @@
                   A productivity tool that allows users to create, track, and
                   manage daily tasks with a clean and intuitive interface.
                 </p>
-                <button class="icon-link project-trigger" type="button" data-project="tasks" aria-label="Open Task Management System case study"
-                  ><i class="fa fa-external-link" aria-hidden="true"></i
-                ></button>
+                <button
+                  class="icon-link project-trigger"
+                  type="button"
+                  data-project="tasks"
+                  aria-label="Open Task Management System case study"
+                >
+                  <i class="fa fa-external-link" aria-hidden="true"></i>
+                </button>
               </div>
             </div>
 
@@ -258,9 +292,14 @@
                   A professional landing page designed to highlight services,
                   capture leads, and boost online presence for small businesses.
                 </p>
-                <button class="icon-link project-trigger" type="button" data-project="landing" aria-label="Open Business Landing Page case study"
-                  ><i class="fa fa-external-link" aria-hidden="true"></i
-                ></button>
+                <button
+                  class="icon-link project-trigger"
+                  type="button"
+                  data-project="landing"
+                  aria-label="Open Business Landing Page case study"
+                >
+                  <i class="fa fa-external-link" aria-hidden="true"></i>
+                </button>
               </div>
             </div>
 
@@ -272,9 +311,14 @@
                   An interactive dashboard using Python and JavaScript libraries
                   to transform raw data into clear, actionable insights.
                 </p>
-                <button class="icon-link project-trigger" type="button" data-project="analytics" aria-label="Open Data Visualization Dashboard case study"
-                  ><i class="fa fa-external-link" aria-hidden="true"></i
-                ></button>
+                <button
+                  class="icon-link project-trigger"
+                  type="button"
+                  data-project="analytics"
+                  aria-label="Open Data Visualization Dashboard case study"
+                >
+                  <i class="fa fa-external-link" aria-hidden="true"></i>
+                </button>
               </div>
             </div>
 
@@ -287,9 +331,14 @@
                   system, enabling easy publishing, editing, and audience
                   engagement.
                 </p>
-                <button class="icon-link project-trigger" type="button" data-project="blog" aria-label="Open Blog Content Platform case study"
-                  ><i class="fa fa-external-link" aria-hidden="true"></i
-                ></button>
+                <button
+                  class="icon-link project-trigger"
+                  type="button"
+                  data-project="blog"
+                  aria-label="Open Blog Content Platform case study"
+                >
+                  <i class="fa fa-external-link" aria-hidden="true"></i>
+                </button>
               </div>
             </div>
           </div>
@@ -299,8 +348,18 @@
 
     <div class="project-modal" id="project-modal" aria-hidden="true">
       <div class="project-modal__backdrop" data-project-modal-close></div>
-      <section class="project-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
-        <button class="project-modal__close" type="button" aria-label="Close project case study" data-project-modal-close>
+      <section
+        class="project-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="project-modal-title"
+      >
+        <button
+          class="project-modal__close"
+          type="button"
+          aria-label="Close project case study"
+          data-project-modal-close
+        >
           <i class="fa-solid fa-xmark" aria-hidden="true"></i>
         </button>
         <img class="project-modal__image" src="" alt="" />
@@ -309,8 +368,14 @@
           <h2 id="project-modal-title"></h2>
           <p class="project-modal__story"></p>
           <div class="project-modal__grid">
-            <div><h3>The brief</h3><p class="project-modal__brief"></p></div>
-            <div><h3>How I approached it</h3><p class="project-modal__approach"></p></div>
+            <div>
+              <h3>The brief</h3>
+              <p class="project-modal__brief"></p>
+            </div>
+            <div>
+              <h3>How I approached it</h3>
+              <p class="project-modal__approach"></p>
+            </div>
           </div>
           <h3 class="project-modal__tools-title">Tools and focus</h3>
           <ul class="project-modal__tools"></ul>

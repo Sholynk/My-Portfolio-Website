@@ -23,21 +23,35 @@ if (window.innerWidth <= 768) {
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('nav li a');
 
-window.onscroll = () => {
-    sections.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
+function setActiveNavLink(id) {
+    navLinks.forEach((link) => link.classList.remove('active'));
+    document.querySelector(`nav li a[href="#${id}"]`)?.classList.add('active');
+}
 
-        if (top >= offset && top < offset + height) {
-            navLinks.forEach(links => {
-                links.classList.remove('active');
-                document.querySelector('nav li a[href*=' + id + ']').classList.add('active');
-            });
+function updateActiveNavLink() {
+    let activeId = 'home';
+    const scrollPosition = window.scrollY + 160;
+
+    sections.forEach((section) => {
+        const id = section.getAttribute('id');
+        if (id && scrollPosition >= section.offsetTop) {
+            activeId = id;
         }
-
     });
+
+    setActiveNavLink(activeId);
+}
+
+navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+        const id = link.getAttribute('href')?.slice(1);
+        if (id) setActiveNavLink(id);
+        document.documentElement.style.scrollBehavior = 'smooth';
+    });
+});
+
+window.onscroll = () => {
+    updateActiveNavLink();
     // Sticky Navbar
     let nav = document.querySelector('nav');
     nav.classList.toggle('sticky', window.scrollY > 100);
@@ -55,13 +69,6 @@ window.onscroll = () => {
     // scrollUpBtn.addEventListener('click', () => {
     //     document.documentElement.style.scrollBehavior = 'auto';
     // });
-    // // Smooth scroll on menu items click
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            document.documentElement.style.scrollBehavior = 'smooth';
-        });
-    });
-
     // OR
     // // Show/Hide scroll up button on scroll
     // if (pageYOffset >= 500) {
@@ -71,6 +78,8 @@ window.onscroll = () => {
     // }
 
 };
+
+updateActiveNavLink();
 
 
 // Typing Animation Script
@@ -101,9 +110,9 @@ TypeWriter.prototype.type = function () {
         this.txt = fullTxt.substring(0, this.txt.length + 1);
     }
 
-    // Insert txt into element 
+    // Insert txt into element
     this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
-    // Initial Type Speed 
+    // Initial Type Speed
     let typeSpeed = 500;
     if (this.isDeleting) {
         typeSpeed /= 2;
@@ -111,7 +120,7 @@ TypeWriter.prototype.type = function () {
 
     // If word is complete
     if (!this.isDeleting && this.txt === fullTxt) {
-        // Make pause at end 
+        // Make pause at end
         typeSpeed = this.wait;
         //Set delete to true
         this.isDeleting = true;
@@ -127,7 +136,7 @@ TypeWriter.prototype.type = function () {
     setTimeout(() => this.type(), 250)
 }
 
-// Init On DOM Load 
+// Init On DOM Load
 document.addEventListener('DOMContentLoaded', init);
 
 // Init App
