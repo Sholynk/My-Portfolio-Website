@@ -532,24 +532,56 @@ nav .nav-links li .active::after {
   justify-content: center;
   text-align: center;
   row-gap: 0.5rem;
-  color: var(--text-color);
+  color: #ffffff;
   background-image: linear-gradient(
     135deg,
-    rgba(5, 8, 22, 0.95),
-    rgba(47, 128, 237, 0.88),
-    rgba(56, 189, 248, 0.8)
+    rgba(5, 8, 22, 0.98),
+    rgba(10, 29, 66, 0.97),
+    rgba(15, 39, 96, 0.95)
   );
-  transition: all 0.3s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+  transition: transform 0.3s ease;
 }
 
 .project-card-intro h3 {
   font-weight: 900;
   font-size: 1.5rem;
+  color: #ffffff;
 }
 
 .project-card-intro p {
   padding: 1rem;
   font-size: 1.2rem;
+  color: #e2e8f0;
+}
+
+.project-card-intro .icon-link {
+  display: grid;
+  place-items: center;
+  width: 4.2rem;
+  height: 4.2rem;
+  padding: 0;
+  color: #0b1730;
+  background: #f8fafc;
+  border: 2px solid #f8fafc;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.project-card-intro .icon-link:hover,
+.project-card-intro .icon-link:focus-visible {
+  color: #06101f;
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+  box-shadow: 0 10px 24px rgba(56, 189, 248, 0.35);
+  transform: translateY(-2px) scale(1.06);
 }
 
 .project-card:hover .project-card-intro {
