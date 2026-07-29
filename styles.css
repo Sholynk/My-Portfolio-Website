@@ -214,22 +214,30 @@ nav .nav-links li .active {
   outline: none;
 }
 
-.header .header-content .header-text .btn {
+.header .header-content .header-text .btn,
+.about-me .about-content .about-text .btn,
+.services .services-content > * .btn,
+.contact-form-button {
   font-size: 1.5rem;
   font-weight: bold;
   background: linear-gradient(135deg, var(--main-color), var(--accent-color));
   padding: 1rem 2rem;
   border-radius: 999px;
-  color: #f8fafc;
+  color: var(--text-color);
   box-shadow: 0 10px 24px rgba(47, 128, 237, 0.25);
   transition:
     transform 0.3s ease,
-    box-shadow 0.3s ease;
+    box-shadow 0.3s ease,
+    background 0.3s ease;
 }
 
-.header .header-content .header-text .btn:hover {
+.header .header-content .header-text .btn:hover,
+.about-me .about-content .about-text .btn:hover,
+.services .services-content > * .btn:hover,
+.contact-form-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 14px 28px rgba(47, 128, 237, 0.35);
+  background: linear-gradient(135deg, var(--hover-color), var(--main-color));
   color: var(--text-color);
 }
 
@@ -338,24 +346,6 @@ nav .nav-links li .active {
   margin-bottom: 2rem;
 }
 
-.about-me .about-content .about-text .btn {
-  font-size: 1.5rem;
-  font-weight: bold;
-  background-color: var(--main-color);
-  padding: 1rem 2rem;
-  border-radius: 25px;
-  color: #1f242d;
-  box-shadow: 0 2px 5px var(--main-color);
-  transition: background 0.3s ease;
-}
-
-.about-me .about-content .about-text .btn:hover {
-  background-color: transparent;
-  box-shadow: none;
-  color: var(--text-color);
-  outline: 2px solid var(--main-color);
-}
-
 /* Styling for Services section */
 .services {
   width: 100%;
@@ -427,23 +417,6 @@ nav .nav-links li .active {
   margin-bottom: 1.2rem;
 }
 
-.services .services-content > * .btn {
-  font-size: 1.5rem;
-  font-weight: bold;
-  background-color: var(--main-color);
-  padding: 1rem 2rem;
-  border-radius: 25px;
-  color: #1f242d;
-  box-shadow: 0 2px 5px var(--main-color);
-  transition: background 0.3s ease;
-}
-.services .services-content > * .btn:hover {
-  background-color: transparent;
-  box-shadow: none;
-  color: var(--text-color);
-  outline: 2px solid var(--main-color);
-}
-
 .projects {
   width: 100%;
   min-height: 100vh;
@@ -495,10 +468,12 @@ nav .nav-links li .active {
   justify-content: center;
   text-align: center;
   row-gap: 0.5rem;
+  color: var(--text-color);
   background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.9),
-    var(--main-color)
+    135deg,
+    rgba(5, 8, 22, 0.95),
+    rgba(47, 128, 237, 0.88),
+    rgba(56, 189, 248, 0.8)
   );
   transition: all 0.3s ease;
 }
@@ -702,23 +677,8 @@ textarea {
 .contact-form-button {
   width: fit-content;
   place-self: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-  background: linear-gradient(135deg, var(--main-color), var(--accent-color));
-  padding: 1rem 2rem;
-  border-radius: 999px;
-  color: #f8fafc;
-  box-shadow: 0 10px 24px rgba(47, 128, 237, 0.25);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
   position: absolute;
   bottom: 0;
-}
-
-.contact-form-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 28px rgba(47, 128, 237, 0.35);
 }
 
 footer {
@@ -762,19 +722,19 @@ footer p a:hover {
   height: 3rem;
   width: 3rem;
   aspect-ratio: 1/1;
-  background-color: var(--main-color);
+  background: linear-gradient(135deg, var(--main-color), var(--accent-color));
   font-size: 2rem;
   text-align: center;
   line-height: 3rem;
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0 2px 5px var(--main-color);
+  box-shadow: 0 10px 24px rgba(47, 128, 237, 0.25);
   display: none;
   z-index: 10000;
 }
 
 .scroll-up-btn i {
-  color: var(--bg-color);
+  color: var(--text-color);
   transition: color 0.3s ease;
 }
 
@@ -785,13 +745,13 @@ footer p a:hover {
 }
 
 .scroll-up-btn:hover {
-  background-color: transparent;
-  box-shadow: 0 2px 5px var(--second-bg-color);
-  outline: 2px solid var(--main-color);
+  background: linear-gradient(135deg, var(--hover-color), var(--main-color));
+  box-shadow: 0 14px 28px rgba(47, 128, 237, 0.35);
+  outline: 2px solid var(--accent-color);
 }
 
 .scroll-up-btn:hover i {
-  color: var(--main-color);
+  color: var(--text-color);
 }
 
 footer div a {
