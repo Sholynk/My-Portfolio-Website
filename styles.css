@@ -727,7 +727,7 @@ body.modal-open {
   outline: 2px solid #ffffff;
   outline-offset: 3px;
   box-shadow: 0 10px 24px rgba(56, 189, 248, 0.35);
-  transform: translateY(-2rem) scale(1.06);
+  transform: translateY(-2px) scale(1.06);
 }
 
 .project-card:hover .project-card-intro {
