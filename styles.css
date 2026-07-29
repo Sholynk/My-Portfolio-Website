@@ -214,7 +214,7 @@ nav .nav-links li .active {
   outline: none;
 }
 
-..header .header-content .header-text .btn {
+.header .header-content .header-text .btn {
   font-size: 1.5rem;
   font-weight: bold;
   background: linear-gradient(135deg, var(--main-color), var(--accent-color));
@@ -590,7 +590,6 @@ nav .nav-links li .active {
   border-radius: 2rem;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  white-space: wrap;
   transition:
     transform 0.3s ease,
     border-color 0.3s ease,
@@ -624,6 +623,13 @@ nav .nav-links li .active {
   font-size: 1.4rem;
   color: var(--muted-text-color);
   line-height: 1.6;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.contact-info-item:first-child p {
+  max-width: 100%;
+  white-space: normal;
 }
 
 /* Contact Form Styling */
