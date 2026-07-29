@@ -100,12 +100,13 @@ nav {
   justify-content: center;
   align-items: center;
   position: fixed;
-  background: rgba(5, 8, 22, 0.9);
+  background: rgba(5, 8, 22, 0.78);
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
   z-index: 9999;
   top: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.16);
 }
 
 nav .nav-content {
@@ -113,7 +114,7 @@ nav .nav-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem;
+  padding: 1rem 1.5rem;
 }
 
 nav .logo {
@@ -164,7 +165,7 @@ nav .nav-links {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  column-gap: 1.3rem;
+  column-gap: 0.4rem;
 }
 
 nav .nav-links li {
@@ -174,17 +175,41 @@ nav .nav-links li {
 }
 
 nav .nav-links li a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 3.8rem;
+  padding: 0 1.1rem;
+  border-radius: 999px;
   text-decoration: none;
   color: var(--text-color);
-  transition: color 0.5s ease;
+  transition:
+    color 0.25s ease,
+    background-color 0.25s ease;
 }
 
 nav .nav-links li a:hover {
   color: var(--main-color);
+  background: rgba(255, 255, 255, 0.07);
 }
 
 nav .nav-links li .active {
-  color: var(--main-color);
+  color: var(--text-color);
+  background: linear-gradient(135deg, var(--main-color), var(--hover-color));
+  box-shadow: 0 6px 18px rgba(47, 128, 237, 0.28);
+}
+
+nav .nav-links li .active::after {
+  content: "";
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  bottom: -0.6rem;
+  left: 50%;
+  border-radius: 50%;
+  background: var(--accent-color);
+  box-shadow: 0 0 1rem var(--accent-color);
+  transform: translateX(-50%);
 }
 
 .menu-icon {
@@ -846,7 +871,9 @@ footer div a:hover {
     justify-content: center;
     row-gap: 1rem;
     align-items: center;
-    background-color: var(--bg-color);
+    background: rgba(5, 8, 22, 0.96);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22);
     transition: height 0.3s ease;
     z-index: 1000;
   }
