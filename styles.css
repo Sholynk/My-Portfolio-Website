@@ -786,7 +786,7 @@ body.modal-open {
 } */
 
 @media (hover: none) {
-  .project-card {
+  /* .project-card {
     min-height: 0;
   }
 
@@ -802,7 +802,7 @@ body.modal-open {
     pointer-events: auto;
     transform: none;
   }
-}
+} */
 
 .project-trigger {
   cursor: pointer;
