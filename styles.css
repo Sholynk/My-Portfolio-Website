@@ -995,6 +995,7 @@ body.modal-open {
   max-width: 62rem;
   align-items: center;
   text-align: center;
+  border: 2px solid firebrick; 
 }
 
 .contact-info-intro h2 {
