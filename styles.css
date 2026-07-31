@@ -696,7 +696,7 @@ body.modal-open {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1 / 0.2;
   transition: transform 0.35s ease;
 }
 
@@ -707,25 +707,28 @@ body.modal-open {
 
 .project-card-intro {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   gap: 1rem;
-  padding: 2rem;
+  padding: 1.5rem;
   background: linear-gradient(
     135deg,
-    rgba(0, 0, 0, 0.92),
+    rgba(0, 0, 0, 0.94),
     rgba(0, 0, 0, 0.88)
   );
   opacity: 0;
   pointer-events: none;
-  transform: translateY(1.5rem);
+  transform: translateY(1rem);
   transition:
-    opacity 0.35s ease,
-    transform 0.35s ease;
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .project-card:hover .project-card-intro,
@@ -736,27 +739,27 @@ body.modal-open {
 }
 
 .project-card-intro h3 {
-  font-weight: 900;
-  font-size: 1.6rem;
+  font-weight: 800;
+  font-size: 1.5rem;
   color: #ffffff;
 }
 
 .project-card-intro p {
-  font-size: 1.25rem;
-  color: #cbd5e1;
+  font-size: 1.2rem;
+  color: #e2e8f0;
   max-width: 28rem;
 }
 
-/* Trigger button inside the overlay — overrides global .icon-link */
+/* Trigger button inside the overlay */
 .project-card-intro .icon-link {
-  width: 4.2rem;
-  height: 4.2rem;
+  width: 4rem;
+  height: 4rem;
   display: grid;
   place-items: center;
   align-self: center;
-  margin: 0.8rem 0 0 0;
+  margin: 0.5rem 0 0 0;
   padding: 0;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   color: #ffffff;
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.4);
@@ -775,10 +778,10 @@ body.modal-open {
   color: #ffffff;
   outline: none;
   transform: scale(1.1);
-  box-shadow: 0 0 20px rgba(29, 155, 240, 0.35);
+  box-shadow: 0 0 18px rgba(29, 155, 240, 0.35);
 }
 
-/* Touch / no-hover: show overlay statically */
+/* Touch / no-hover: show overlay statically below the image */
 @media (hover: none) {
   .project-card img {
     aspect-ratio: 4 / 3;
@@ -786,10 +789,13 @@ body.modal-open {
 
   .project-card-intro {
     position: static;
+    width: 100%;
+    height: auto;
     opacity: 1;
     pointer-events: auto;
     transform: none;
     background: var(--second-bg-color);
+    border-top: 1px solid var(--surface-border);
     border-radius: 0 0 15px 15px;
   }
 
