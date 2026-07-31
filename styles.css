@@ -284,12 +284,8 @@ nav .nav-links li a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 4rem;
-  padding: 6rem 2rem;
-}
-
-.header .header-text {
-  flex: 1;
+  gap: 2rem;
+  padding: 10rem 1.5rem;
 }
 
 .header .header-text .intro-text {
@@ -350,24 +346,36 @@ nav .nav-links li a {
 
 /* Profile photo */
 .header .header-content .profile-photo {
-  flex-shrink: 0;
-  width: min(34rem, 40vw);
-  aspect-ratio: 1;
+  width: 70%;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid rgba(29, 155, 240, 0.25);
-  animation: float 4s ease-in-out infinite;
+  box-shadow:
+    2px 2px 35px -5px var(--main-color) inset,
+    -2px -2px 35px -5px var(--main-color) inset;
+  animation: float 3s ease-in-out infinite;
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-1.6rem); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-2.4rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .header .header-content .profile-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  aspect-ratio: 1/1.1;
+  object-fit: contain;
 }
 
 /* ══════════════════════════════════════
@@ -387,43 +395,44 @@ nav .nav-links li a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 6rem;
-  padding: 8rem 2rem;
+  padding: 10rem 1.5rem;
+  column-gap: 2rem;
 }
 
 .about-me .about-content .profile-photo {
-  flex-shrink: 0;
-  width: min(30rem, 36vw);
-  aspect-ratio: 1;
+  aspect-ratio: 1/1;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid rgba(29, 155, 240, 0.2);
-  animation: float 4s ease-in-out infinite;
+  flex: 1 0 35%;
+  display: flex;
+  align-items: center;
+  box-shadow:
+    2px 2px 35px var(--main-color) inset,
+    -2px -2px 35px var(--main-color) inset;
+  animation: float 3s ease-in-out infinite;
 }
 
 .about-me .about-content .profile-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  aspect-ratio: 1/1.1;
+  object-fit: contain;
 }
 
 .about-me .about-content .about-text h2 {
-  margin-bottom: 0.8rem;
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
 }
 
 .about-me .about-content .about-text h3 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: var(--main-color);
-  margin-bottom: 1.6rem;
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
 }
 
 .about-me .about-content .about-text p {
-  font-size: 1.45rem;
-  line-height: 1.75;
-  color: var(--muted-text-color);
-  margin-bottom: 2.5rem;
-  max-width: 56rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
 }
 
 /* ══════════════════════════════════════
@@ -440,71 +449,63 @@ nav .nav-links li a {
 
 .services .services-wrapper {
   width: 100%;
-  padding: 8rem 2rem;
+  padding: 10rem 2rem;
 }
 
 .services .services-wrapper h2 {
-  text-align: center;
+  font-size: 3rem;
+  font-weight: 900;
   margin-bottom: 3rem;
+  text-align: center;
+}
+
+.services .services-wrapper p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .services .services-content {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  grid-gap: 3rem;
 }
 
 .services .services-content > * {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding: 3rem 2.5rem;
-  border-radius: 1.6rem;
-  background: var(--second-bg-color);
-  border: 1px solid var(--surface-border);
-  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text-color);
+  text-align: center;
+  background-color: var(--second-bg-color);
+  padding: 2rem;
+  border-radius: 10px;
+  transition:
+    all 0.3s ease,
+    color 0.3s ease;
 }
 
 .services .services-content > *:hover {
-  border-color: rgba(29, 155, 240, 0.35);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
+  box-shadow: 0 2px 5px var(--main-color);
 }
 
 .services .services-content > * i {
-  font-size: 2.6rem;
+  font-size: 3rem;
   color: var(--main-color);
-  margin-bottom: 1.6rem;
-}
-
-.services .services-content > * h4 {
-  font-size: 1.8rem;
-  font-weight: 700;
   margin-bottom: 1rem;
 }
 
-.services .services-content > * p {
-  font-size: 1.35rem;
-  line-height: 1.7;
-  color: var(--muted-text-color);
-  margin-bottom: 2rem;
-  flex: 1;
-}
-
-.services .services-content > * .btn {
-  align-self: flex-start;
-  font-size: 1.3rem;
-  padding: 0.9rem 1.8rem;
-  background: transparent;
-  border: 1px solid var(--surface-border);
-  color: var(--text-color);
-}
-
-.services .services-content > * .btn:hover {
-  background: var(--main-color);
-  border-color: var(--main-color);
-  color: #ffffff;
+.services .services-content > * h4 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1.2rem;
 }
 
 /* ══════════════════════════════════════
@@ -660,7 +661,7 @@ body.modal-open {
 .projects {
   width: 100%;
   min-height: 100vh;
-  padding: 8rem 2rem;
+  padding: 10rem 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -676,7 +677,76 @@ body.modal-open {
 }
 
 .projects-title h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
   text-align: center;
+}
+
+.project-card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.project-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 4 / 3;
+  transition: transform 0.35s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.08);
+}
+
+.project-card-intro {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  row-gap: 0.5rem;
+  color: #ffffff;
+  background-image: linear-gradient(
+    135deg,
+    rgba(5, 8, 22, 0.96),
+    rgba(10, 29, 66, 0.95),
+    rgba(15, 39, 96, 0.93)
+  );
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(1.5rem);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  padding: 1.5rem;
+}
+
+.project-card:hover .project-card-intro,
+.project-card:focus-within .project-card-intro {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+@media (hover: none) {
+  .project-card img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .project-card-intro {
+    position: static;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+  }
 }
 
 .projects-container {
@@ -1226,65 +1296,75 @@ footer p a:hover {
   /* Hero */
   .header {
     height: auto;
-    padding: 4rem 0;
+    padding: 5rem 0;
   }
 
   .header .header-content {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 5rem;
-    padding: 4rem 1.5rem;
+    align-items: baseline;
+    row-gap: 10rem;
   }
 
   .header .header-content .profile-photo {
-    width: 70%;
+    width: 80%;
     align-self: center;
   }
 
   .header .header-content .header-text .intro-text {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+  }
+
+  .header .header-content .header-text .name {
+    font-size: 3rem;
+  }
+
+  .header .header-content .header-text .title {
+    font-size: 1.7rem;
   }
 
   .header .header-content .header-text p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .header .header-content .header-text .social-media-icon a {
-    font-size: 1.6rem;
-    width: 3.6rem;
-    height: 3.6rem;
+    font-size: 1.5rem;
+    margin: 0 0.5em 2rem 0;
   }
 
-  .btn {
-    font-size: 1.3rem;
-    padding: 1rem 2rem;
+  .header .header-content .header-text .btn {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
   }
 
   /* About */
   .about-me {
     height: auto;
-    padding: 4rem 0;
+    padding: 5rem 0;
   }
 
   .about-me .about-content {
     flex-direction: column-reverse;
-    gap: 5rem;
-    padding: 4rem 1.5rem;
+    row-gap: 10rem;
+  }
+
+  .about-me .about-content .about-image {
+    flex: 0 1 70%;
   }
 
   .about-me .about-content .profile-photo {
-    width: 70%;
+    width: 80%;
   }
 
   /* Services */
   .services {
     height: auto;
-    padding: 4rem 0;
+    padding: 5rem 0;
   }
 
   .services .services-content {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    padding: 0 3rem;
+    row-gap: 3rem;
   }
 
   .services .services-content > *:nth-child(3) {
@@ -1297,6 +1377,7 @@ footer p a:hover {
   }
 
   .projects-container {
+    padding: 2rem 1.5rem;
     grid-template-columns: repeat(2, 1fr);
   }
 
