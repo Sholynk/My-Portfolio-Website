@@ -1,7 +1,14 @@
-// Reliable touch detection (avoids inconsistent CSS hover media queries on Android)
-if ("ontouchstart" in window || navigator.maxTouchPoints > 0) {
-  document.body.classList.add("touch-device");
+// Reliable input-type detection: a fine pointer (mouse/trackpad) means hover works,
+// regardless of whether the device also has a touchscreen.
+function applyInputModeClass() {
+  const hasFinePointer = window.matchMedia('(any-pointer: fine)').matches;
+  document.body.classList.toggle('touch-device', !hasFinePointer);
 }
+applyInputModeClass();
+
+// Some hybrid devices can switch input mode without a reload (e.g. detachable
+// keyboards/mice). Re-check on the events that most reliably signal a switch.
+window.matchMedia('(any-pointer: fine)').addEventListener('change', applyInputModeClass);
 
 if (window.innerWidth <= 768) {
   const navBar = document.querySelector(".nav-links");
