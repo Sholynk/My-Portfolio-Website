@@ -24,7 +24,7 @@
 }
 
 html {
-  font-size: 62.5%;            /* 1rem = 10px */
+  font-size: 62.5%; /* 1rem = 10px */
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -32,7 +32,13 @@ html {
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
   font-weight: 400;
   line-height: 1.6;
   width: 100%;
@@ -88,8 +94,13 @@ span {
 }
 
 @keyframes blink {
-  0%, 100% { border-color: var(--main-color); }
-  50% { border-color: transparent; }
+  0%,
+  100% {
+    border-color: var(--main-color);
+  }
+  50% {
+    border-color: transparent;
+  }
 }
 
 /* ── Buttons ── */
@@ -103,7 +114,10 @@ span {
   border-radius: 999px;
   background: var(--main-color);
   color: #ffffff;
-  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   letter-spacing: 0.01em;
 }
 
@@ -120,7 +134,9 @@ span {
   border-radius: 999px;
   background: var(--main-color);
   color: #ffffff;
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 
 .contact-form-button:hover {
@@ -138,7 +154,10 @@ span {
   color: var(--text-color);
   background: rgba(29, 155, 240, 0.12);
   border-radius: 50%;
-  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .icon-link:hover {
@@ -233,7 +252,9 @@ nav .nav-links li a {
   padding: 0 1.4rem;
   border-radius: 999px;
   color: var(--muted-text-color);
-  transition: color 0.2s ease, background 0.2s ease;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
 }
 
 nav .nav-links li a:hover {
@@ -335,7 +356,10 @@ nav .nav-links li a {
   color: var(--muted-text-color);
   border: 1px solid var(--surface-border);
   border-radius: 50%;
-  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .header .header-text .social-media-icon a:hover {
@@ -525,7 +549,9 @@ body.modal-open {
   padding: 2rem;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.25s ease, visibility 0.25s ease;
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease;
 }
 
 .service-modal.is-open {
@@ -646,7 +672,9 @@ body.modal-open {
   border-radius: 50%;
   color: var(--text-color);
   background: rgba(0, 0, 0, 0.6);
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
   cursor: pointer;
 }
 
@@ -714,11 +742,7 @@ body.modal-open {
   text-align: center;
   gap: 1rem;
   padding: 2rem;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 0.95),
-    rgba(0, 0, 0, 0.85)
-  );
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.85));
   transform: translateY(100%);
   pointer-events: none;
   transition: transform 0.35s ease;
@@ -755,7 +779,10 @@ body.modal-open {
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.4);
   border-radius: 50%;
-  transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
 }
 
 .project-card-intro .icon-link:hover,
@@ -766,19 +793,24 @@ body.modal-open {
   box-shadow: 0 0 18px rgba(29, 155, 240, 0.35);
 }
 
-/* Touch / no-hover fallback */
-@media (max-width: 768px) {
-  .project-card img {
-    height: 22rem;
-  }
+.project-card:hover .project-card-intro,
+.project-card:focus-within .project-card-intro,
+.project-card.is-revealed .project-card-intro {
+  transform: translateY(0);
+  pointer-events: auto;
+}
 
-  .project-card-intro {
-    position: static;
-    transform: none;
-    pointer-events: auto;
-    background: var(--second-bg-color);
-    border-top: 1px solid var(--surface-border);
-  }
+/* Touch devices: no hover reveal — show intro as a static block */
+body.touch-device .project-card-intro {
+  position: static;
+  transform: none;
+  pointer-events: auto;
+  background: var(--second-bg-color);
+  border-top: 1px solid var(--surface-border);
+}
+
+body.touch-device .project-card img {
+  height: 22rem;
 }
 
 .projects-container {
@@ -804,7 +836,9 @@ body.modal-open {
   padding: 2rem;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.25s ease, visibility 0.25s ease;
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease;
 }
 
 .project-modal.is-open {
@@ -932,7 +966,9 @@ body.modal-open {
   border-radius: 50%;
   color: var(--text-color);
   background: rgba(0, 0, 0, 0.6);
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
   cursor: pointer;
 }
 
@@ -1004,7 +1040,9 @@ body.modal-open {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid var(--surface-border);
   color: var(--text-color);
-  transition: border-color 0.3s ease, transform 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .contact-info-item:hover {
@@ -1104,7 +1142,9 @@ textarea {
   border: 1px solid var(--surface-border);
   font-family: inherit;
   font-size: 1.4rem;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 form input:focus,
@@ -1167,7 +1207,9 @@ footer p a:hover {
   place-items: center;
   z-index: 10000;
   box-shadow: 0 4px 16px rgba(29, 155, 240, 0.3);
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 
 .scroll-up-btn.show {
