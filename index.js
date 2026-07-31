@@ -1,3 +1,8 @@
+// Reliable touch detection (avoids inconsistent CSS hover media queries on Android)
+if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+  document.body.classList.add('touch-device');
+}
+
 if (window.innerWidth <= 768) {
     const navBar = document.querySelector('.nav-links');
     const menuIcon = document.querySelector('.menu-icon');
