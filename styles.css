@@ -974,7 +974,7 @@ body.touch-device .project-card img {
 
 .project-modal__close:hover {
   background: var(--main-color);
-  transform: rotate(90deg);
+  transform: rotate(100deg);
 }
 
 /* ══════════════════════════════════════
