@@ -5,7 +5,7 @@ if (window.innerWidth <= 768) {
     // Toggle nav visibility and menu icon state
     menuIcon.addEventListener('click', (e) => {
         e.stopPropagation();
-        navBar.classList.toggle('nav');
+        navBar.classList.toggle('open');
         menuIcon.classList.toggle('open');
     });
 
@@ -13,7 +13,7 @@ if (window.innerWidth <= 768) {
     window.addEventListener('click', (e) => {
 
         if (!navBar.contains(e.target) && !menuIcon.contains(e.target)) {
-            navBar.classList.remove('nav');
+            navBar.classList.remove('open');
             menuIcon.classList.remove('open');
         }
     });
@@ -59,7 +59,7 @@ window.onscroll = () => {
     const navBar = document.querySelector('.nav-links');
     const menuIcon = document.querySelector('.menu-icon');
 
-    navBar.classList.remove('nav');
+    navBar.classList.remove('open');
     menuIcon.classList.remove('open');
 
     // // Scroll Up Button Show/Hide
