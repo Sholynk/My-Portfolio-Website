@@ -975,7 +975,8 @@ body.modal-open {
 }
 
 .contact-info-content {
-  width: 100%;
+  width: 50%;
+  align-self: center;
   display: flex;
   flex-direction: column;
   gap: 3rem;
