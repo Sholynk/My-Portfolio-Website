@@ -182,8 +182,8 @@ nav {
   top: 0;
   z-index: 9999;
   background: rgba(0, 0, 0, 0.82);
-  backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--surface-border);
 }
 
@@ -485,8 +485,8 @@ nav .nav-links li a {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.78);
-  backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
 
 /* Parent: flex — controls image vs. content arrangement */
@@ -865,8 +865,8 @@ body.modal-open {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.72);
-  backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
 
 .service-modal__dialog {
@@ -1153,8 +1153,8 @@ body.touch-device .project-card img {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.78);
-  backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
 
 .project-modal__dialog {
