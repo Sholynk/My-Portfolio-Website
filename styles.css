@@ -646,11 +646,25 @@ nav .nav-links li a {
 @media (max-width: 670px) {
   .about-modal__dialog {
     grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .about-modal__image-wrap {
+    min-height: 0;
+  }
+
+  .about-modal__image-wrap img {
+    border-radius: 0;
+    box-shadow: none;
+    animation: none;
+    aspect-ratio: auto;
+    object-fit: cover;
   }
 
   .about-modal__image {
     min-height: 18rem;
     max-height: 22rem;
+    height: 20rem;
   }
 
   .about-modal__content {
