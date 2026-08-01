@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -69,7 +69,7 @@
             "description": "Software developer providing web development, application development, digital design, and digital marketing services.",
             "email": "sholabusari66@gmail.com",
             "address": {
-              "@type": "PostalAddress",
+              "@type": "120105",
               "addressRegion": "Ogun State",
               "addressCountry": "NG"
             },
@@ -132,24 +132,32 @@
             </h4>
             <p>
               I specialize in creating efficient, scalable software solutions
-              with cutting-edge technologies. My expertise includes web
-              development, mobile applications, and cloud infrastructure.
+              with cutting edge technologies. My expertise includes web
+              development, mobile applications, Search Engine Optimization,
+              Generative Engine Optimization and Data Analysis.
             </p>
             <div class="social-media-icon">
-              <a href="#" aria-label="Visit X profile"
+              <a href="https://x.com/sholynked" aria-label="Visit X profile"
                 ><i class="fa-brands fa-x-twitter"></i
               ></a>
-              <a href="#" aria-label="Visit Facebook profile"
+              <a
+                href="https://www.facebook.com/share/18xwSHcWr4/"
+                aria-label="Visit Facebook profile"
                 ><i class="fa-brands fa-facebook-f"></i
               ></a>
-              <a href="#" aria-label="Visit Telegram profile"
+              <a href="https://t.me/Sholynk" aria-label="Visit Telegram profile"
                 ><i class="fa-brands fa-telegram"></i
               ></a>
-              <a href="#" aria-label="Visit WhatsApp profile"
+              <a
+                href="https://wa.me/qr/CV4VS7HDF2PHD1"
+                aria-label="Visit WhatsApp profile"
                 ><i class="fa-brands fa-whatsapp"></i
               ></a>
             </div>
-            <a href="#" class="btn" download>Download CV</a>
+            <!-- Download Button-->
+            <a href="my files\Oluwashola Busari CV.pdf" class="btn" download
+              >Download CV</a
+            >
           </div>
 
           <div class="profile-photo">
@@ -186,11 +194,146 @@
               developers, or exploring new technologies in the ever-evolving
               world of software development.
             </p>
-            <a href="#" class="btn">Read More</a>
+            <a
+              href="my files\Oluwashola Busari CV.pdf"
+              class="btn about-trigger"
+              type="button"
+              >Read More</a
+            >
           </div>
         </div>
       </div>
     </section>
+
+    <!-- About Modal -->
+    <div class="about-modal" id="about-modal" aria-hidden="true">
+      <div class="about-modal__backdrop" data-about-modal-close></div>
+      <section
+        class="about-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="about-modal-title"
+      >
+        <button
+          class="about-modal__close"
+          type="button"
+          aria-label="Close about details"
+          data-about-modal-close
+        >
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+
+        <div class="about-modal__image-wrap">
+          <img
+            class="about-modal__image"
+            src="images/1.png"
+            alt="Oluwashola Busari"
+          />
+        </div>
+
+        <div class="about-modal__content">
+          <div class="about-modal__eyebrow">
+            <i class="fa-solid fa-user" aria-hidden="true"></i>
+            <span>About me</span>
+          </div>
+          <h2 id="about-modal-title">Oluwashola Busari</h2>
+          <p class="about-modal__role">
+            Software Developer &mdash; Ago-Iwoye, Ogun State, Nigeria
+          </p>
+
+          <p class="about-modal__summary">
+            I'm a software developer with over four years of experience in
+            JavaScript and three in Python, backed by an academic foundation in
+            Mass Communication. I build responsive, user-friendly web
+            applications and bring an analytical, communication-driven approach
+            to solving real-world problems &mdash; spanning web development,
+            digital marketing, data analysis, and project management.
+          </p>
+
+          <h3>Technical skills</h3>
+          <ul class="about-modal__skills">
+            <li>
+              <i class="fa-brands fa-js" aria-hidden="true"></i>JavaScript
+            </li>
+            <li>
+              <i class="fa-brands fa-python" aria-hidden="true"></i>Python
+            </li>
+            <li><i class="fa-brands fa-html5" aria-hidden="true"></i>HTML5</li>
+            <li>
+              <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>CSS3 &amp;
+              Sass
+            </li>
+            <li>
+              <i class="fa-brands fa-node-js" aria-hidden="true"></i>Node.js
+            </li>
+            <li>
+              <i class="fa-solid fa-mobile-screen" aria-hidden="true"></i
+              >Responsive Design
+            </li>
+            <li>
+              <i class="fa-solid fa-chart-line" aria-hidden="true"></i>Data
+              Analysis
+            </li>
+            <li>
+              <i class="fa-solid fa-bullhorn" aria-hidden="true"></i>Digital
+              Marketing
+            </li>
+          </ul>
+
+          <h3>Experience</h3>
+          <div class="about-modal__timeline">
+            <div class="about-modal__timeline-item">
+              <p class="about-modal__timeline-date">Jan 2023 &ndash; Present</p>
+              <p class="about-modal__timeline-title">
+                Portfolio &amp; Blog Website Development
+              </p>
+              <p class="about-modal__timeline-desc">
+                Designed and built responsive, content-driven websites with a
+                focus on usability, cross-device compatibility, and performance.
+              </p>
+            </div>
+          </div>
+
+          <h3>Education</h3>
+          <div class="about-modal__timeline">
+            <div class="about-modal__timeline-item">
+              <p class="about-modal__timeline-date">
+                Oct 2019 &ndash; Dec 2023
+              </p>
+              <p class="about-modal__timeline-title">
+                B.Sc. Mass Communication
+              </p>
+              <p class="about-modal__timeline-desc">
+                Olabisi Onabanjo University, Ago-Iwoye, Nigeria
+              </p>
+            </div>
+          </div>
+
+          <a
+            href="my files\Oluwashola Busari CV.pdf"
+            class="btn about-modal__cv-btn"
+            id="download-cv-btn"
+            download
+          >
+            <i class="fa-solid fa-download" aria-hidden="true"></i>
+            Download CV
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <!-- Download notifier toast -->
+    <div class="download-toast" id="download-toast" aria-live="polite">
+      <div class="download-toast__icon">
+        <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
+      </div>
+      <div class="download-toast__body">
+        <p class="download-toast__title">Downloading CV&hellip;</p>
+        <div class="download-toast__bar-track">
+          <div class="download-toast__bar-fill"></div>
+        </div>
+      </div>
+    </div>
 
     <!-- Services -->
     <section id="service-info" class="services">

@@ -178,6 +178,115 @@ ScrollReveal().reveal(
   { origin: "right" },
 );
 
+// ── About Modal ──
+const aboutModal = document.querySelector('#about-modal');
+let lastAboutTrigger;
+
+function openAboutModal(trigger) {
+  if (!aboutModal) return;
+  lastAboutTrigger = trigger;
+  aboutModal.classList.add('is-open');
+  aboutModal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('modal-open');
+  aboutModal.querySelector('.about-modal__close').focus();
+}
+
+function closeAboutModal() {
+  if (!aboutModal) return;
+  aboutModal.classList.remove('is-open');
+  aboutModal.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('modal-open');
+  lastAboutTrigger?.focus();
+}
+
+document.querySelectorAll('.about-trigger').forEach((trigger) => {
+  trigger.addEventListener('click', (e) => {
+    e.preventDefault();
+    openAboutModal(trigger);
+  });
+});
+
+aboutModal?.querySelectorAll('[data-about-modal-close]').forEach((control) => {
+  control.addEventListener('click', closeAboutModal);
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && aboutModal?.classList.contains('is-open')) {
+    closeAboutModal();
+  }
+});
+
+// ── CV Download with progress notifier ──
+const downloadToast = document.querySelector('#download-toast');
+const toastTitle = downloadToast?.querySelector('.download-toast__title');
+const toastBar = downloadToast?.querySelector('.download-toast__bar-fill');
+
+function showToast() {
+  downloadToast?.classList.add('show');
+  downloadToast?.classList.remove('is-complete');
+  if (toastTitle) toastTitle.textContent = 'Downloading CV…';
+  if (toastBar) toastBar.style.width = '0%';
+}
+
+function setToastProgress(percent) {
+  if (toastBar) toastBar.style.width = `${percent}%`;
+}
+
+function completeToast() {
+  downloadToast?.classList.add('is-complete');
+  if (toastTitle) toastTitle.textContent = 'Download complete';
+  setTimeout(() => downloadToast?.classList.remove('show'), 3000);
+}
+
+async function handleCvDownload(event, url, filename) {
+  event.preventDefault();
+  showToast();
+
+  try {
+    const response = await fetch(url);
+    if (!response.ok || !response.body) throw new Error('Fetch failed');
+
+    const total = Number(response.headers.get('Content-Length')) || 0;
+    const reader = response.body.getReader();
+    const chunks = [];
+    let received = 0;
+
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      chunks.push(value);
+      received += value.length;
+      if (total) setToastProgress(Math.min(100, (received / total) * 100));
+    }
+
+    const blob = new Blob(chunks);
+    const blobUrl = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = blobUrl;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(blobUrl);
+
+    setToastProgress(100);
+    completeToast();
+  } catch (err) {
+    // Fallback: let the browser handle it directly if fetch/stream fails
+    if (toastTitle) toastTitle.textContent = 'Starting download…';
+    window.location.href = url;
+    setTimeout(completeToast, 1200);
+  }
+}
+
+document.querySelectorAll('a[download]').forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    const url = btn.getAttribute('href');
+    const filename = url.split('/').pop() || 'Oluwashola_Busari_CV.pdf';
+    handleCvDownload(e, url, filename);
+  });
+});
+
 const serviceDetails = {
   web: {
     title: "Web Development",
