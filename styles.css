@@ -489,11 +489,12 @@ nav .nav-links li a {
   -webkit-backdrop-filter: blur(8px);
 }
 
+/* Parent: flex — controls image vs. content arrangement */
 .about-modal__dialog {
   position: relative;
   z-index: 1;
-  display: grid;
-  grid-template-columns: minmax(22rem, 0.75fr) 1fr;
+  display: flex;
+  align-items: stretch;
   width: min(86rem, 100%);
   max-height: min(74rem, calc(100vh - 4rem));
   overflow: auto;
@@ -510,18 +511,30 @@ nav .nav-links li a {
 }
 
 .about-modal__image-wrap {
-  min-height: 100%;
+  flex: 0 0 34%;
+  min-width: 22rem;
   background: #0a0a0a;
+  overflow: hidden;
 }
 
 .about-modal__image {
+  display: block;
   width: 100%;
   height: 100%;
   min-height: 30rem;
   object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+  animation: none;
 }
 
+/* Child: grid — controls internal stacking of text blocks */
 .about-modal__content {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: start;
   padding: 4rem 3.5rem;
 }
 
@@ -618,6 +631,7 @@ nav .nav-links li a {
   align-items: center;
   gap: 0.8rem;
   margin-top: 2.4rem;
+  width: fit-content;
 }
 
 .about-modal__close {
@@ -643,28 +657,20 @@ nav .nav-links li a {
   transform: rotate(90deg);
 }
 
+/* Breakpoint: flip flex-direction instead of grid-template-columns */
 @media (max-width: 670px) {
   .about-modal__dialog {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
+    flex-direction: column;
   }
 
   .about-modal__image-wrap {
-    min-height: 0;
-  }
-
-  .about-modal__image-wrap img {
-    border-radius: 0;
-    box-shadow: none;
-    animation: none;
-    aspect-ratio: auto;
-    object-fit: cover;
+    flex: 0 0 auto;
+    min-width: 0;
   }
 
   .about-modal__image {
-    min-height: 18rem;
-    max-height: 22rem;
     height: 20rem;
+    min-height: 0;
   }
 
   .about-modal__content {
@@ -675,7 +681,6 @@ nav .nav-links li a {
     grid-template-columns: 1fr;
   }
 }
-
 /* ══════════════════════════════════════
    DOWNLOAD TOAST NOTIFIER
    ══════════════════════════════════════ */
