@@ -78,17 +78,6 @@ window.onscroll = () => {
   // // Scroll Up Button Show/Hide
   let scrollUpBtn = document.querySelector(".scroll-up-btn");
   scrollUpBtn.classList.toggle("show", window.scrollY > 500);
-  // Remove smooth scroll on scroll up button click
-  // scrollUpBtn.addEventListener('click', () => {
-  //     document.documentElement.style.scrollBehavior = 'auto';
-  // });
-  // OR
-  // // Show/Hide scroll up button on scroll
-  // if (pageYOffset >= 500) {
-  //     document.querySelector('.scroll-up-btn').classList.add('show');
-  // } else {
-  //     document.querySelector('.scroll-up-btn').classList.remove('show');
-  // }
 };
 
 updateActiveNavLink();
@@ -415,7 +404,7 @@ const projectDetails = {
     story:
       "For this store concept, I focused on the moments that decide whether shopping feels easy or frustrating: finding the right product, understanding the price, and moving through checkout with confidence. The goal was to make the experience feel familiar without feeling generic.",
     brief:
-      "I designed a practical online shopping flow with product discovery, a shopping cart, and a secure-feeling checkout journey.",
+      "I designed a practical online shopping flow with product discovery, a shopping cart, and a secure feeling checkout journey.",
     approach:
       "I mapped the journey from browsing to purchase, kept product information scannable, and used clear feedback around cart changes so the interface never leaves the customer guessing.",
     tools: [
@@ -436,7 +425,7 @@ const projectDetails = {
     brief:
       "I create a lightweight workspace for planning daily work, assigning priorities, and seeing what still needs attention.",
     approach:
-      "I reduced the interface to the decisions that matter most—what to do next, what can wait, and what is already done—then made each state easy to scan at a glance.",
+      "I reduced the interface to the decisions that matter most what to do next, what can wait, and what is already done—then made each state easy to scan at a glance.",
     tools: [
       "JavaScript",
       "State management",
