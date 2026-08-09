@@ -394,9 +394,9 @@ const projectDetails = {
       "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=85",
     alt: "Developer workspace with a laptop displaying code",
     story:
-      "I wanted this portfolio to feel calm and straightforward: the kind of place where someone can quickly understand what I do, then stay because the work feels considered. I treated every section as a small conversation rather than a wall of information.",
+      "I wanted this portfolio to feel calm and straightforward, the kind of place where someone can quickly understand what I do, then stay because the work feels considered. I treated every section as a small conversation.",
     brief:
-      "Create a personal site that introduces my work, services, and ways to get in touch without making the visitor hunt for anything.",
+      "I create a personal site that introduces my work, services, and ways to get in touch without making the visitor hunt for anything.",
     approach:
       "I built a responsive layout around a clear reading order, gave the main actions room to breathe, and added small interactions only where they help guide attention.",
     tools: [
@@ -415,7 +415,7 @@ const projectDetails = {
     story:
       "For this store concept, I focused on the moments that decide whether shopping feels easy or frustrating: finding the right product, understanding the price, and moving through checkout with confidence. The goal was to make the experience feel familiar without feeling generic.",
     brief:
-      "Design a practical online shopping flow with product discovery, a shopping cart, and a secure-feeling checkout journey.",
+      "I designed a practical online shopping flow with product discovery, a shopping cart, and a secure-feeling checkout journey.",
     approach:
       "I mapped the journey from browsing to purchase, kept product information scannable, and used clear feedback around cart changes so the interface never leaves the customer guessing.",
     tools: [
@@ -434,7 +434,7 @@ const projectDetails = {
     story:
       "This was built for people who have plenty to do and do not need another complicated system getting in their way. I kept the core experience focused on making a task visible, giving it a home, and making progress satisfying to track.",
     brief:
-      "Create a lightweight workspace for planning daily work, assigning priorities, and seeing what still needs attention.",
+      "I create a lightweight workspace for planning daily work, assigning priorities, and seeing what still needs attention.",
     approach:
       "I reduced the interface to the decisions that matter most—what to do next, what can wait, and what is already done—then made each state easy to scan at a glance.",
     tools: [
@@ -453,7 +453,7 @@ const projectDetails = {
     story:
       "A good landing page should feel like a helpful introduction, not a sales pitch shouted from across the room. Here, I used the page to make the business offer clear, build trust early, and give visitors an easy next step when they are ready.",
     brief:
-      "Build a conversion-focused page that explains a service quickly and encourages prospective customers to make contact.",
+      "I build a conversion-focused page that explains a service quickly and encourages prospective customers to make contact.",
     approach:
       "I organised the content around the customer’s questions, used proof points where they naturally matter, and kept calls to action consistent throughout the page.",
     tools: [
@@ -472,7 +472,7 @@ const projectDetails = {
     story:
       "The point of this dashboard was not to show every number available. It was to help someone spot what is changing, ask a better question, and make a decision without getting lost in a spreadsheet.",
     brief:
-      "Turn a large set of performance data into a dashboard that highlights trends, outliers, and useful next actions.",
+      "I turn a large set of performance data into a dashboard that highlights trends, outliers, and useful next actions.",
     approach:
       "I grouped related metrics, gave the most important trends visual priority, and used simple comparisons so the story in the data is easier to understand.",
     tools: [
@@ -491,7 +491,7 @@ const projectDetails = {
     story:
       "This platform was designed around the people who have to keep content moving: writers, editors, and readers. I wanted publishing to feel less like a technical hurdle and more like a reliable part of a team’s everyday rhythm.",
     brief:
-      "Create a content platform that makes drafting, reviewing, publishing, and discovering articles simple for everyone involved.",
+      "I create a content platform that makes drafting, reviewing, publishing, and discovering articles simple for everyone involved.",
     approach:
       "I gave the writing experience a clean, quiet layout, made article management easy to scan, and treated readability as a product feature rather than an afterthought.",
     tools: [
