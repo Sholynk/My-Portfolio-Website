@@ -1,0 +1,12 @@
+{
+  "extends": ["development"],
+  "hints": {
+    "disown-opener": "on",
+    "disown-opener-allowlist": [
+      "https://wa.me/qr/CV VS7HDF2PHD1",
+      "https://t.me/Sholynk",
+      "https://www.facebook.com/share/18xwSHcWr4/",
+      "https://x.com/sholynked"
+    ]
+  }
+}

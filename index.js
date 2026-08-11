@@ -425,7 +425,7 @@ const projectDetails = {
     brief:
       "I create a lightweight workspace for planning daily work, assigning priorities, and seeing what still needs attention.",
     approach:
-      "I reduced the interface to the decisions that matter most what to do next, what can wait, and what is already done—then made each state easy to scan at a glance.",
+      "I reduced the interface to the decisions that matter most, what to do next, what can wait, and what is already done then made each state easy to scan at a glance.",
     tools: [
       "JavaScript",
       "State management",

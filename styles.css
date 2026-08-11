@@ -1674,7 +1674,7 @@ footer p a:hover {
 
   /* Projects */
   .projects {
-    padding: 4rem 1.5rem;
+    padding: 8rem 1.5rem;
   }
 
   .projects-container {
@@ -1684,7 +1684,7 @@ footer p a:hover {
 
   /* Contact info */
   .contact-info {
-    padding: 6rem 1.5rem;
+    padding: 8rem 1.5rem;
   }
 
   .contact-info-content {
